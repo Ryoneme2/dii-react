@@ -1,7 +1,12 @@
 import propTypes from "prop-types";
 
 const types = {
-  item: propTypes.string.isRequired,
+  item: propTypes.shape({
+    id: propTypes.number.isRequired,
+    name: propTypes.string.isRequired,
+    imageURL: propTypes.string.isRequired,
+    type: propTypes.string.isRequired,
+  }),
 };
 
 const Product = ({ item }) => {
